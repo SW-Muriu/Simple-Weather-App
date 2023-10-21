@@ -6,3 +6,5 @@ declare module './apiConfig.json' {
   }
 
   import apiConfig = require('./apiConfig.json');
+
+  //I am fucking tired
