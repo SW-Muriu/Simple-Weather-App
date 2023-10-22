@@ -1,19 +1,19 @@
 import { HttpClient } from '@angular/common/http';
-import * as  apiConfig from '../interfaces/apiConfig.json';
-// import { apiConfig } from '../interfaces/apiConfig.json'
+// import * as  apiConfig from '../interfaces/apiConfig.json';
+// import apiConfig from '../interfaces/apiConfig.json'
 
 
 // constructor(private httpClient: HttpClient) {}
 
 export function fetchOpenWeatherUrl(city: string, country: string) {
     const url =
-        apiConfig.location_api +
+        "https://api.openweathermap.org/geo/1.0/" +
         'direct?q=' +
         city +
         ',,' +
         country +
         '&limit=3&appid=' +
-        apiConfig.api_key;
+        "180aff8985c4d1be039fb47bf05ae0a3";
 
     return url;
 }
@@ -21,20 +21,20 @@ export function fetchOpenWeatherUrl(city: string, country: string) {
 // src/assets/apiConfig.json
 export function getUrlFromParams(latitude: number, longitude: number) {
     const url =
-        apiConfig.weather_api +
+        "https://api.openweathermap.org/data/2.5/" +
         'weather?lat=' +
         latitude +
         '&lon=' +
         longitude +
         '&appid=' +
-        apiConfig.api_key +
+        "180aff8985c4d1be039fb47bf05ae0a3" +
         '&units=metric';
 
     return url;
 }
 
 export function getIconUrl(weatherIcon: string){
-    const url = apiConfig.icon_url + weatherIcon + '@2x.png'; 
+    const url = "https://openweathermap.org/img/wn/" + weatherIcon + '@2x.png'; 
     return url; 
 }
 

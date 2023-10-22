@@ -7,12 +7,13 @@ import { Location } from '../../interfaces/interfaces';
 @Component({
   selector: 'app-location-search',
   templateUrl: './location-search.component.html',
-  styleUrls: ['./location-search.component.scss']
+  styleUrls: ['./location-search.component.sass']
 })
 export class LocationSearchComponent {
   searched: boolean = false;
   dataSource: Location [] = [];
-  isLoaded: boolean = false;
+  isLoading: boolean = false;
+  displayedColumns: string[] = ['name', 'country'];
   constructor(
     private router: Router,
     private weatherManService: WeatherService,
@@ -42,7 +43,7 @@ export class LocationSearchComponent {
       },
       complete: () => {
         console.info('Fetch Complete');
-        this.isLoaded = true
+        this.isLoading = true
       }
     })
   }

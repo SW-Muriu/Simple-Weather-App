@@ -7,7 +7,7 @@ import { WeatherService } from 'src/app/services/weather.service';
 @Component({
   selector: 'app-weather-board',
   templateUrl: './weather-board.component.html',
-  styleUrls: ['./weather-board.component.scss']
+  styleUrls: ['./weather-board.component.sass']
 })
 export class WeatherBoardComponent {
 

@@ -1,10 +1,13 @@
-declare module './apiConfig.json' {
-    export const apiConfig: {
-      baseUrl: string;
-      apiKey: string;
+declare module '*.json' {
+     const value : {
+      api_key: string;
+      location_api: string;
+      weather_api: string;
+      icon_url: string;
     };
+    export default  value;
   }
 
-  import apiConfig = require('./apiConfig.json');
+  
 
   //I am fucking tired
